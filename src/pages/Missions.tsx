@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Brain, Eye, Calculator, Puzzle, Lock } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import MemoryGame from "@/components/MemoryGame";
+import FocusGame from "@/components/FocusGame";
+import MathGame from "@/components/MathGame";
+import PatternGame from "@/components/PatternGame";
 import { useGameState } from "@/hooks/useGameState";
 import LevelUpModal from "@/components/LevelUpModal";
 
@@ -66,13 +69,17 @@ const Missions = () => {
     setActiveMission(null);
   };
 
-  if (activeMission && ["memory", "focus", "math", "pattern"].includes(activeMission)) {
-    return (
-      <MemoryGame
-        onComplete={handleGameComplete}
-        onExit={() => setActiveMission(null)}
-      />
-    );
+  if (activeMission === "memory") {
+    return <MemoryGame onComplete={handleGameComplete} onExit={() => setActiveMission(null)} />;
+  }
+  if (activeMission === "focus") {
+    return <FocusGame onComplete={handleGameComplete} onExit={() => setActiveMission(null)} />;
+  }
+  if (activeMission === "math") {
+    return <MathGame onComplete={handleGameComplete} onExit={() => setActiveMission(null)} />;
+  }
+  if (activeMission === "pattern") {
+    return <PatternGame onComplete={handleGameComplete} onExit={() => setActiveMission(null)} />;
   }
 
   return (
