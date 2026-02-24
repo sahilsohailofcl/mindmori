@@ -66,7 +66,7 @@ const Missions = () => {
     setActiveMission(null);
   };
 
-  if (activeMission === "memory") {
+  if (activeMission && ["memory", "focus", "math", "pattern"].includes(activeMission)) {
     return (
       <MemoryGame
         onComplete={handleGameComplete}
