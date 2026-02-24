@@ -37,7 +37,7 @@ const Missions = () => {
       icon: Eye,
       xpReward: 60,
       unlockLevel: 3,
-      available: false,
+      available: true,
     },
     {
       id: "math",
@@ -45,8 +45,8 @@ const Missions = () => {
       description: "Solve equations under time pressure",
       icon: Calculator,
       xpReward: 70,
-      unlockLevel: 5,
-      available: false,
+      unlockLevel: 1,
+      available: true,
     },
     {
       id: "pattern",
@@ -54,8 +54,8 @@ const Missions = () => {
       description: "Find matching patterns in complex grids",
       icon: Puzzle,
       xpReward: 80,
-      unlockLevel: 7,
-      available: false,
+      unlockLevel: 1,
+      available: true,
     },
   ];
 
