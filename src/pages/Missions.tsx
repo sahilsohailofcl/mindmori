@@ -36,7 +36,7 @@ const Missions = () => {
       description: "Track moving objects and test your attention",
       icon: Eye,
       xpReward: 60,
-      unlockLevel: 3,
+      unlockLevel: 1,
       available: true,
     },
     {
